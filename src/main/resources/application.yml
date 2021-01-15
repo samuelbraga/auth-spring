@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: "Auth Backend"
+  datasource:
+    driver-class-name: "org.h2.Driver"
+    url: "jdbc:h2:mem:auth"
+    username: "sa"
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+    hibernate:
+      ddl-auto: "validate"
+
+jwt:
+  secret: 558faec18823712a02a5c3d395a2da07
+  expiration: 86400000
