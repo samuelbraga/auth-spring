@@ -1,4 +1,4 @@
-package com.samuelbraga.authentication.services.Impl;
+package com.samuelbraga.authentication.services.impl;
 
 import com.samuelbraga.authentication.configs.hash.Hash;
 import com.samuelbraga.authentication.configs.mapper.Mapper;
@@ -103,10 +103,8 @@ public class UserServiceImpl implements UserService {
 
   private List<Profile> getProfile(Long id) {
     Profile profile = this.profileService.findProfileById(id);
-    List<Profile> profiles = new ArrayList<>(
+    return new ArrayList<>(
       Collections.singletonList(profile)
     );
-
-    return profiles;
   }
 }

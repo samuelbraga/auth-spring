@@ -3,7 +3,6 @@ package com.samuelbraga.authentication.configs.security;
 import com.samuelbraga.authentication.exceptions.BaseException;
 import com.samuelbraga.authentication.models.User;
 import com.samuelbraga.authentication.repositories.UserRepository;
-import com.samuelbraga.authentication.services.UserService;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

@@ -20,12 +20,12 @@ import org.springframework.test.web.servlet.MvcResult;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class UserControllerTest {
+class UserControllerTest {
   @Autowired
   private MockMvc mockMvc;
 
   @Test
-  public void shouldBeCreatedAnUser() throws Exception {
+  void shouldBeCreatedAnUser() throws Exception {
     CreateUserDTO createUserDTO = CreateUserDTO
       .builder()
       .email("foo.bar@example.com")
@@ -52,7 +52,7 @@ public class UserControllerTest {
 
   @Test
   @WithMockUser(authorities = "ADMIN")
-  public void shouldBeListUsers() throws Exception {
+  void shouldBeListUsers() throws Exception {
     MvcResult result =
       this.mockMvc.perform(
           get("/users").contentType(MediaType.APPLICATION_JSON)

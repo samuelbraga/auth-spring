@@ -1,4 +1,4 @@
-package com.samuelbraga.authentication.services.Impl;
+package com.samuelbraga.authentication.services.impl;
 
 import com.samuelbraga.authentication.exceptions.BaseException;
 import com.samuelbraga.authentication.models.Profile;
