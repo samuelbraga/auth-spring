@@ -1,10 +1,10 @@
 package com.samuelbraga.authentication.services.impl;
 
-import com.samuelbraga.authentication.configs.security.TokenAuthenticationService;
 import com.samuelbraga.authentication.dtos.authenticate.CredentialsDTO;
 import com.samuelbraga.authentication.dtos.authenticate.TokenDTO;
 import com.samuelbraga.authentication.exceptions.BaseException;
 import com.samuelbraga.authentication.services.AuthenticateService;
+import com.samuelbraga.authentication.services.TokenAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -9,6 +9,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.samuelbraga.authentication.services.TokenAuthenticationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -17,6 +20,7 @@ public class AuthenticationFilter extends OncePerRequestFilter {
   private final TokenAuthenticationService tokenAuthenticationService;
   private final UserRepository userRepository;
 
+  @Autowired
   public AuthenticationFilter(
     TokenAuthenticationService tokenAuthenticationService,
     UserRepository userRepository
